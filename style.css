@@ -1,0 +1,573 @@
+/*!
+Theme Name: CardiPress
+Theme URI: http://github.com/hughrun
+Author: Hugh Rundle
+Author URI: https://www.hughrundle.net
+Description: A theme for the newCardigan website.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: cardipress
+Tags: ;
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+body {
+	margin:0;
+	font-family: 'Dosis', sans-serif;
+	font-size: 1.25em;
+}
+a {
+	color: #ff748c;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+pre {
+	overflow: scroll;
+}
+
+nav button {
+	color: #fff;
+	border-color: #fff;	
+}
+
+nav button a {
+	color: #fff;
+}
+
+.grid {
+	min-height: 100vh;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 2.5vw 1fr 5vw 1fr 2.5vw;
+	-ms-grid-rows: repeat(12, 1fr);	
+	grid-template-columns: 2.5vw 1fr 5vw 1fr 2.5vw;
+	padding: 0 0 12em;
+}
+
+/*HEADER*/
+
+.header {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 5vw 1fr 1fr 1fr 5vw;
+	grid-template-columns: 5vw repeat(3, 1fr) 5vw;
+	grid-gap: 0;
+	color: #fff;	
+	background: gray;
+	min-height: 8em;
+}
+
+.header h1 {
+	color: #fff;
+}
+
+.nc-header {
+	-ms-grid-column: 2;
+	grid-column-start: 2;
+}
+
+.nc-header a {
+	color: #3a3a3a;
+}
+
+.new-cardigan {
+	font-family: 'Amaranth', serif;
+}
+
+.pink {
+	color: #ff748c;
+}
+
+/*
+* navigation
+**/
+
+.main-navigation {
+	-ms-grid-column: 4;
+	grid-column: 4 / -1;
+	margin: 0.83em;
+	text-align: right;
+}
+
+nav button {
+	padding: 0.8em;
+	text-transform: uppercase;
+	color: #fff;
+	background: none;
+	border: 1px solid #fff;
+	font-family: 'Dosis', sans-serif;
+	font-size: 0.8em;
+}
+
+.main-navigation ul {
+	-ms-grid-column-span: 1;
+	grid-column-end: 4;
+	padding: 0;
+}
+
+/*always hide the menu by default*/
+
+.menu {
+	display: none;
+	padding: 0;
+	color: #fff;
+}
+
+.menu a {
+	color: #fff;
+}
+
+.menu ul {
+	-ms-grid-column-span: 1;	
+	grid-column-end: 4;
+	padding: 0;
+}
+
+.menu li {
+	padding: 0.5em 0;
+	border-bottom: 1px solid #fff;
+}
+
+.sub-menu li {
+	border: none;
+	font-style:italic;
+	color: #3a3a3a;
+}
+
+/*FRONT PAGE*/
+
+/*IE grid fix*/
+
+.cardi-desc {
+	-ms-grid-column: 3;
+}
+#parties {
+	-ms-grid-row: 1;
+}
+
+.melb-party,
+.melb-img {
+	-ms-grid-row: 2;
+}
+
+.perth-party,
+.perth-img {
+	-ms-grid-row: 3;
+}
+
+#cardicast {
+	-ms-grid-row: 4;
+}
+
+.cardicast-content,
+.cardicast-img {
+	-ms-grid-row: 5;
+}
+
+.cardicast-img + .cardicast-img {
+	-ms-grid-row: 6;
+}
+
+#blogclub {
+	-ms-grid-row: 7;
+}
+
+.blogclub-content,
+.blogclub-img {
+	-ms-grid-row: 8;
+}
+
+.blogclub img + .blogclub-img {
+	-ms-grid-row: 9;
+}
+
+#news {
+	-ms-grid-row: 10;
+}
+
+.news-content,
+.news-img {
+	-ms-grid-row: 11;
+}
+
+.news-img + .news-img {
+	-ms-grid-row: 12;
+}
+
+
+/*end IE grid fix*/
+
+.project-title {
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 5;	
+	grid-column: 1 / -1;
+	background: #ff748c;
+	color: #fff;
+	font-weight: bold;
+	line-height: 2em;
+	text-align: right;
+	padding-right: 1em;
+	font-size: 1.5em;
+/*	margin-bottom: 2em;*/
+}
+
+.nc-content-box {
+	-ms-grid-column: 2;
+	grid-column-start: 2;
+}
+
+.nc-content-box content p {
+	text-align: left;
+}
+
+.post-img {
+	-ms-grid-column: 4;
+	grid-column-start: 4;
+/*	margin: 1em 0;*/
+}
+
+.post-img img {
+	object-fit: cover;
+	width: 45vw;
+	height:22.5vw;
+}
+
+.cardicast-content,
+.news-content {
+	-ms-grid-column: 4;	
+	grid-column-start: 4;
+	-ms-grid-row-span: 2;
+	grid-row-end: span 2;
+}
+
+.cardicast-img,
+.news-img {
+	-ms-grid-column: 2;	
+	grid-column-start: 2;
+}
+
+/*SINGLE PAGE (POST AND PAGE)*/
+
+.post-content {
+	-ms-grid-column: 2;
+	-ms-grid-column-span: 3;		
+	grid-column: 2 / span 3;
+}
+
+.post-index {
+	margin-top: 1em;
+	border-bottom: 1px solid #3a3a3a;
+}
+
+.post-header {
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    background-position: center;
+    height: 47.5vw;
+    width: 95vw;
+    max-width:1024px;
+    max-height: 512px;
+    margin:auto;
+}
+
+.post-header-overlay h1 {
+	color: #fff;
+	text-shadow: 1px 1px #3a3a3a;
+}
+
+.meta {
+	background-color:#fff;
+	margin-bottom: 4em;
+	text-align: center;
+}
+
+.author a {
+	color: #3a3a3a;
+	border-bottom: 1px dashed #3a3a3a;
+}
+
+.category a {
+	padding: 0.25em;
+	background: #ff748c;
+	color: #fff;
+}
+
+.tags a {
+	padding: 0.25em;
+	background: #3a3a3a;
+	color: #fff;
+}
+/*comments
+
+/*this might need some work*/
+
+/*.comments-area {
+	margin-top: 5vw;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+#existing-comments {
+	-ms-grid-column-span: 2;
+	grid-column-end: span 2;
+}
+
+.comment-respond p label {
+	margin-right: 2em;
+}
+
+.comment-respond form p {
+	text-align: right;
+}
+
+.comment-respond p textarea,
+.comment-respond p input {
+	width: 60%;
+}
+
+#submit {
+	text-transform: uppercase;
+	color: #3a3a3a;
+	background: none;
+	border: 1px solid #3a3a3a;
+	font-family: 'Dosis', sans-serif;
+	font-size: 0.8em;
+}*/
+
+/*FOOTER*/
+
+.nc-home-footer {
+	text-align: left;
+	background: gray;
+	padding: 2.5vw 5vw;
+	color: lightgray;
+}
+
+.nc-home-footer a {
+		color: #fff;
+}
+
+.nc-home-footer a:active,
+.nc-home-footer a:hover {
+		color: #3a3a3a;
+}
+
+/*SIDEBAR*/
+
+.sidebar {
+	display: grid;
+	-ms-grid-columns: 2.5vw 1fr 2.5vw 1fr 2.5vw 1fr 2.5vw;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2.5vw;
+}
+
+/*--------------------------------------------------------------
+# civiCRM
+--------------------------------------------------------------*/
+
+/*Fix the weird alignment in dropdown choice divs*/
+.select2-container .select2-choice {
+	line-height: 1em;
+}
+
+/*change help*/
+.crm-container .help {
+  background-color: #8cff74;
+  border: darkgreen;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*create gap between radio buttons and the text next to them*/
+input {
+	margin-right:1em;
+}
+
+/*create gap so printer icon isn't in header*/
+.crm-container {
+  margin-top: 2em;
+}
+
+/*fix fontsize*/
+#crm-container.crm-section .label,
+#crm-container.crm-section .content,
+#crm-container.crm-section .price-set-row,
+#crm-container.crm-public .label,
+#crm-container.crm-public .content,
+#crm-container.crm-public .price-set-row {
+	font-size: 20px;
+}
+
+/*highlight selected price in pink*/
+#crm-container.crm-public .price-set-row .highlight .crm-price-amount-amount {
+  color: #ff748c;
+}
+
+/*bring buttons into newcardigan style*/
+span .crm-button {
+	text-shadow: none !important;
+	background: #fff !important;
+	color: #ff748c !important;
+	font-size: inherit !important;
+	border: 2px solid #ff748c !important;
+	border-radius: 0 !important;
+	padding: 0.5em !important;
+}
+
+
+
+/*CIVICRM MEDIA QUERIES*/
+
+@media only screen and (max-device-width: 600px), screen and (max-width: 600px) {
+
+.crm-container *,
+.crm-submit-buttons * {
+	font-size: unset !important;
+	height: unset !important;
+}
+
+	.crm-container fieldset {
+		padding: 0;
+		margin: 0;
+	}
+
+	.crm-container .crm-section .content {
+		clear:both;
+		margin-left: 0;
+	}
+
+	.crm-container * {
+		width: auto !important;
+		max-width: 90vw;
+	}
+
+	.select2-container,
+	.crm-container input[type=text] {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+
+	.crm-container .credit_card_type-section .crm-credit_card_type-icons a {
+	width: 50px !important;
+	height: 30px !important;
+	}
+
+	.input {
+		margin-right: 0;
+	}
+
+	.crm-container input.crm-form-text, .crm-container .crm-icon-picker-button, .crm-container input.dateplugin {
+		padding: 0;
+
+	}
+
+	#crm-container.crm-public input[type="text"], #crm-container.crm-public input[type="password"], 
+	#crm-container.crm-public input[type="email"], #crm-container.crm-public select {
+		padding: 0;
+	}
+
+}
+
+
+/*REST OF SITE MEDIA QUERIES*/
+
+@media only screen and (max-device-width: 900px) {
+	body {
+		font-size: 200%;
+	}
+}
+
+@media only screen and (max-device-width: 900px), screen and (max-width: 900px) {
+
+	.main {
+		background: #fff;
+		padding-right: 5vw;
+	}
+
+	.header,
+	.grid {
+		-ms-grid-columns: 5vw 90vw 5vw;
+		grid-template-columns: 5vw 90vw 5vw;
+		grid-gap: 0;
+	}
+
+	.nc-header,
+	.post-content,
+	.cardi-desc,
+	.main-navigation {
+		-ms-grid-column: 2 2;
+		grid-column: 2 / 2;
+	}
+
+	.post-header {
+		height: 50vw;
+		width: 100vw;
+		margin: 0 -5vw;
+	}
+
+	.post-img {
+		-ms-grid-column: 1 end;
+		grid-column: 1 / -1;
+	}
+
+	.post-img img {
+		width: 100vw;
+		height: 50vw;
+	}
+
+	.nc-content-box {
+		padding: 5vw;
+		-ms-grid-column: 1 end;
+		grid-column: 1 / -1
+	}
+
+}
+
+@media only screen and (max-device-width: 600px) {
+	body {
+		font-size: 300%;
+	}
+}
+
+
+@media only screen and (max-device-width: 600px), screen and (max-width: 600px) {
+
+	.category,
+	.tags {
+		display: block;
+	}
+
+	.sidebar,
+	.comments-area {
+		-ms-grid-columns: 100%;
+		grid-template-columns: 100%;
+	}
+
+	.comment-respond .comment-form label,
+	.comment-respond .comment-form input,
+	.comment-respond .comment-form textarea {
+		display:block;
+		width: 100%;
+		text-align: left;
+		font-size: 2.5rem;
+	}
+
+	.comment-respond .comment-form input {
+		min-height: 3rem;
+	}
+
+	#submit {
+		width:100%;
+		height: 3rem;
+		text-align: center;
+	}
+}

@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+# civiCRM
+--------------------------------------------------------------*/
+
+/*Fix the weird alignment in dropdown choice divs*/
+.select2-container .select2-choice {
+	line-height: 1em;
+}
+
+/*change help*/
+.crm-container .help {
+  background-color: #8cff74;
+  border: darkgreen;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*create gap between radio buttons and the text next to them*/
+input {
+	margin-right:1em;
+}
+
+/*fix fontsize*/
+#crm-container.crm-section .label,
+#crm-container.crm-section .content,
+#crm-container.crm-section .price-set-row,
+#crm-container.crm-public .label,
+#crm-container.crm-public .content,
+#crm-container.crm-public .price-set-row {
+	font-size: 20px;
+}
