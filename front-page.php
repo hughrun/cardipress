@@ -12,15 +12,17 @@ get_header(); ?>
 	<div class="project-title" id="parties">Cardi Parties</div>
 	<div class="nc-content-box melb-party">
 		<content class="project-desc">
-			<p>We hold a Cardi Party on the second Friday or following Saturday of every month. Hear from an interesting GLAM speaker, then enjoy a couple of drinks at a local bar.</p> 
+			<p>Hear from an interesting GLAM speaker, then enjoy a couple of drinks at a local bar with fellow GLAM nerds.</p>
 			<p>Cardigans. Cocktails. Shoptalk.</p>
+			<div>
+				<p>We hold a Cardi Party in Melbourne on the second Friday or following Saturday of every month.</p>
+			</div>
 		</content>
 	</div>
 <?php
 	// Find cardi parties in Melbourne
-
 	$args1a = array(
-		'post_type' => 'post', 
+		'post_type' => 'post',
 		'posts_per_page' => '1',
 		'tax_query' => array(
 			'relation' => 'AND',
@@ -47,21 +49,21 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 	<?php else : ?>
-		<div class="nc-content-box melb-party">No Melbourne Cardi Parties available 😟</div>
+		<div class="post-img melb-img">No Melbourne Cardi Parties available 😟</div>
 	<?php endif;
 wp_reset_postdata();
 ?>
 
 	<div class="nc-content-box perth-party">
 		<content class="project-desc">
-			<p>Love sunsets over sea? Perpetually 2 to 3 hours behind? You'll love our Cardi Parties in Perth - coming soon!</p> 
+			<p>Love sunsets over sea? Perpetually 2 to 3 hours behind? You'll love our Cardi Parties in Perth.</p>
 		</content>
 	</div>
 
 <?php
 	// Find cardi parties in Perth
 	$args1b = array(
-		'post_type' => 'post', 
+		'post_type' => 'post',
 		'posts_per_page' => '1',
 		'tax_query' => array(
 			'relation' => 'AND',
@@ -95,18 +97,18 @@ wp_reset_postdata();
 	wp_reset_postdata();
 	?>
 
-	<div class="project-title" id="cardicast">CardiCast</div>
+	<div class="project-title" id="cardicast">cardiCast</div>
 
 	<div class="nc-content-box cardicast-content">
 		<content class="project-desc">
-			<p>CardiCast is a GLAM podcast published every fortnight. Hear a recording of a previous Cardi Party, or interviews with interesting GLAM people from around Australia and the world.</p>
+			<p>cardiCast is a GLAM podcast published every fortnight. Hear a recording of a previous Cardi Party, or interviews with interesting GLAM people from around Australia and the world.</p>
 		</content>
 	</div>
 
 	<?php
 		// Find the latest two podcast episodes (posts with category 'cardicast')
 		$args2 = array(
-			'category_name' => 'cardicast', 
+			'category_name' => 'cardicast',
 			'posts_per_page' => '2'
 		);
 		$cardicast_cat = new WP_Query($args2);
@@ -118,7 +120,7 @@ wp_reset_postdata();
 				</div>
 				<?php endwhile; ?>
 		<?php else : ?>
-			<div class="nc-content-box cardicast">No CardiCasts available 😟</div>
+			<div class="nc-content-box cardicast">No cardiCasts available 😟</div>
 		<?php endif;
 	wp_reset_postdata();
 	?>
@@ -133,7 +135,7 @@ wp_reset_postdata();
 	<?php
 		// Find the latest two blogclub posts (posts with category 'blogclub')
 		$args3 = array(
-			'category_name' => 'blogclub', 
+			'category_name' => 'blogclub',
 			'posts_per_page' => '2'
 		);
 
@@ -155,14 +157,14 @@ wp_reset_postdata();
 
 	<div class="nc-content-box news-content">
 		<content class="project-desc">
-			<p>this is where we'll put the latest news</p>
+			<p>Check out the latest announcements from newCardigan.</p>
 		</content>
 	</div>
 
 	<?php
 		// Find the latest two news items (posts with category 'announcements')
 		$args4 = array(
-			'category_name' => 'announcements', 
+			'category_name' => 'announcements',
 			'posts_per_page' => '2'
 		);
 

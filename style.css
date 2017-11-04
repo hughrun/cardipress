@@ -33,7 +33,7 @@ pre {
 
 nav button {
 	color: #fff;
-	border-color: #fff;	
+	border-color: #fff;
 }
 
 nav button a {
@@ -45,7 +45,7 @@ nav button a {
 	display: -ms-grid;
 	display: grid;
 	-ms-grid-columns: 2.5vw 1fr 5vw 1fr 2.5vw;
-	-ms-grid-rows: repeat(12, 1fr);	
+	-ms-grid-rows: repeat(12, 1fr);
 	grid-template-columns: 2.5vw 1fr 5vw 1fr 2.5vw;
 	padding: 0 0 12em;
 }
@@ -58,7 +58,7 @@ nav button a {
 	-ms-grid-columns: 5vw 1fr 1fr 1fr 5vw;
 	grid-template-columns: 5vw repeat(3, 1fr) 5vw;
 	grid-gap: 0;
-	color: #fff;	
+	color: #fff;
 	background: gray;
 	min-height: 8em;
 }
@@ -124,7 +124,7 @@ nav button {
 }
 
 .menu ul {
-	-ms-grid-column-span: 1;	
+	-ms-grid-column-span: 1;
 	grid-column-end: 4;
 	padding: 0;
 }
@@ -205,7 +205,7 @@ nav button {
 
 .project-title {
 	-ms-grid-column: 1;
-	-ms-grid-column-span: 5;	
+	-ms-grid-column-span: 5;
 	grid-column: 1 / -1;
 	background: #ff748c;
 	color: #fff;
@@ -240,7 +240,7 @@ nav button {
 
 .cardicast-content,
 .news-content {
-	-ms-grid-column: 4;	
+	-ms-grid-column: 4;
 	grid-column-start: 4;
 	-ms-grid-row-span: 2;
 	grid-row-end: span 2;
@@ -248,7 +248,7 @@ nav button {
 
 .cardicast-img,
 .news-img {
-	-ms-grid-column: 2;	
+	-ms-grid-column: 2;
 	grid-column-start: 2;
 }
 
@@ -256,7 +256,7 @@ nav button {
 
 .post-content {
 	-ms-grid-column: 2;
-	-ms-grid-column-span: 3;		
+	-ms-grid-column-span: 3;
 	grid-column: 2 / span 3;
 }
 
@@ -305,45 +305,8 @@ nav button {
 	background: #3a3a3a;
 	color: #fff;
 }
-/*comments
 
-/*this might need some work*/
-
-/*.comments-area {
-	margin-top: 5vw;
-	display: grid;
-	-ms-grid-columns: 1fr 1fr;
-	grid-template-columns: 1fr 1fr;
-}
-
-#existing-comments {
-	-ms-grid-column-span: 2;
-	grid-column-end: span 2;
-}
-
-.comment-respond p label {
-	margin-right: 2em;
-}
-
-.comment-respond form p {
-	text-align: right;
-}
-
-.comment-respond p textarea,
-.comment-respond p input {
-	width: 60%;
-}
-
-#submit {
-	text-transform: uppercase;
-	color: #3a3a3a;
-	background: none;
-	border: 1px solid #3a3a3a;
-	font-family: 'Dosis', sans-serif;
-	font-size: 0.8em;
-}*/
-
-/*FOOTER*/
+/* FOOTER */
 
 .nc-home-footer {
 	text-align: left;
@@ -470,7 +433,7 @@ span .crm-button {
 
 	}
 
-	#crm-container.crm-public input[type="text"], #crm-container.crm-public input[type="password"], 
+	#crm-container.crm-public input[type="text"], #crm-container.crm-public input[type="password"],
 	#crm-container.crm-public input[type="email"], #crm-container.crm-public select {
 		padding: 0;
 	}
