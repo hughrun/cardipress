@@ -33,8 +33,13 @@ function footer_sidebar() {
 
 // enable featured images
 
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 
+// register menu
 
+function register_menus() {
+  register_nav_menu( 'primary', __('Primary Menu', 'cardipress2'));
+}
 
+add_action( 'init', 'register_menus');
 ?>
