@@ -8,7 +8,7 @@ get_header(); ?>
 	      <content class="post-content post-index">
 	      	<h1><?php the_title(); ?></h1>
 	        <?php the_excerpt(); ?>
-	      	<?php the_shortlink('Read more...'); ?>	        
+	      	<?php the_shortlink('Read more...'); ?>
 	      </content>
 	      <?php
 	   endwhile;
