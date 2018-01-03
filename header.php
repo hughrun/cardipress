@@ -10,7 +10,9 @@
 		<a href="/"><h1 class="new-cardigan"><span class="pink">new</span>Cardigan</h1></a>
 	</div> <!-- newCardigan header -->
 	<div class="cardi-desc">
-	<p>A professional network for people who work in or with Galleries, Libraries, Archives and Museums. <a href="/join">Join us.</a></p>
+	<p>A professional network for people who work in or with Galleries, Libraries, Archives and Museums.
+		<!-- <a href="/join">Join us.</a> -->
+	</p>
 	</div>
 	<nav id="site-navigation" class="main-navigation">
 		<!-- button here we can use with some JS -->

@@ -9,6 +9,12 @@ function cardipress_scripts() {
 										get_template_directory_uri() . '/js/navigation.js',
 										array('jquery')
 	);
+	wp_enqueue_script("piwik",
+										get_template_directory_uri() . '/js/piwik.js',
+										array(),
+										false,
+										true
+	);
 }
 
 add_action( 'wp_enqueue_scripts', 'cardipress_scripts' );

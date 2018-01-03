@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="grid">
+<article class="grid">
 	<?php
 	// Start the loop.
 	while ( have_posts() ) : the_post();
@@ -34,6 +34,6 @@
 		?>
 
 	</content>
-</main>
+</article>
 
 <?php get_footer(); ?>

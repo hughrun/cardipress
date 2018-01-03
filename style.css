@@ -4,14 +4,27 @@ Theme URI: http://github.com/hughrun
 Author: Hugh Rundle
 Author URI: https://www.hughrundle.net
 Description: A theme for the newCardigan website.
-Version: 1.0.2
+Version: 1.1.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: cardipress
-Tags: responsive;
+Tags: responsive, custom;
 
 This theme, like WordPress, is licensed under the GPL.
 */
+
+/* shim so IE 10 treats HTML5 semantic elements like divs */
+article,
+aside,
+content,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
 
 body {
 	margin:0;
@@ -61,6 +74,16 @@ q {
 	padding: 0 0 12em;
 }
 
+/* -ms-grid doesn't work well with archive pages - only use full grid and just use margins instead */
+.archive-grid {
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 2.5vw 1fr 5vw 1fr 2.5vw;
+	padding: 0 0 12em;
+	@supports not (display:grid) {
+		margin: 0 2.5vw;
+	}
+}
 /* hide header and footer list bullets*/
 
 header li, .sidebar li {
@@ -249,14 +272,16 @@ nav button {
 
 .post-img {
 	-ms-grid-column: 4;
+	-ms-grid-column-span: 2;
 	grid-column-start: 4;
+	grid-column-end: -1;
 /*	margin: 1em 0;*/
 }
 
 .post-img img {
 	object-fit: cover;
-	width: 45vw;
-	height:22.5vw;
+	width: 47.5vw;
+	height:23.75vw;
 }
 
 .cardicast-content,
@@ -269,8 +294,10 @@ nav button {
 
 .cardicast-img,
 .news-img {
-	-ms-grid-column: 2;
-	grid-column-start: 2;
+	-ms-grid-column: 1;
+	-ms-grid-column-span: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
 }
 
 /*SINGLE PAGE (POST AND PAGE)*/
@@ -315,6 +342,11 @@ nav button {
 	border-bottom: 1px dashed #3a3a3a;
 }
 
+.category,
+.tags {
+	line-height: 2;
+}
+
 .category a {
 	padding: 0.25em;
 	background: #ff748c;
@@ -327,6 +359,15 @@ nav button {
 	color: #fff;
 }
 
+.posts-nav {
+	text-align: center;
+}
+
+.posts-nav a {
+	padding: 0.25em;
+	color: #3a3a3a;
+	background: lightgray;
+}
 /* FOOTER */
 
 .nc-home-footer {
