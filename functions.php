@@ -37,9 +37,22 @@ function footer_sidebar() {
 	);
 }
 
-// enable featured images
+// add title tags automatically from WordPress proper (not from theme)
 
+function theme_slug_setup() {
+   add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+
+// enable featured images
 add_theme_support( 'post-thumbnails' );
+
+// enable automatic feed links
+add_theme_support( 'automatic-feed-links' );
+
+// remove autop (automatic <p>content</p>) from the_excerpt()
+// this is so that our og and twitter descriptions don't contain HTML tags
+remove_filter( 'the_excerpt', 'wpautop' );
 
 // register menu
 

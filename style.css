@@ -4,7 +4,7 @@ Theme URI: http://github.com/hughrun
 Author: Hugh Rundle
 Author URI: https://www.hughrundle.net
 Description: A theme for the newCardigan website.
-Version: 1.1.2
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: cardipress
@@ -281,7 +281,9 @@ nav button {
 .post-img img {
 	object-fit: cover;
 	width: 47.5vw;
-	height:23.75vw;
+	height: 23.75vw;
+  /* make sure there's no gap underneath by making it block instead of inline */
+  display: block;
 }
 
 .cardicast-content,
@@ -395,115 +397,7 @@ nav button {
 	grid-gap: 2.5vw;
 }
 
-/*--------------------------------------------------------------
-# civiCRM
---------------------------------------------------------------*/
-
-/*Fix the weird alignment in dropdown choice divs*/
-.select2-container .select2-choice {
-	line-height: 1em;
-}
-
-/*change help*/
-.crm-container .help {
-  background-color: #8cff74;
-  border: darkgreen;
-  text-align: center;
-  font-size: 16px;
-}
-
-/*create gap between radio buttons and the text next to them*/
-input {
-	margin-right:1em;
-}
-
-/*create gap so printer icon isn't in header*/
-.crm-container {
-  margin-top: 2em;
-}
-
-/*fix fontsize*/
-#crm-container.crm-section .label,
-#crm-container.crm-section .content,
-#crm-container.crm-section .price-set-row,
-#crm-container.crm-public .label,
-#crm-container.crm-public .content,
-#crm-container.crm-public .price-set-row {
-	font-size: 20px;
-}
-
-/*highlight selected price in pink*/
-#crm-container.crm-public .price-set-row .highlight .crm-price-amount-amount {
-  color: #ff748c;
-}
-
-/*bring buttons into newcardigan style*/
-span .crm-button {
-	text-shadow: none !important;
-	background: #fff !important;
-	color: #ff748c !important;
-	font-size: inherit !important;
-	border: 2px solid #ff748c !important;
-	border-radius: 0 !important;
-	padding: 0.5em !important;
-}
-
-
-
-/*CIVICRM MEDIA QUERIES*/
-
-@media only screen and (max-device-width: 600px), screen and (max-width: 600px) {
-
-.crm-container *,
-.crm-submit-buttons * {
-	font-size: unset !important;
-	height: unset !important;
-}
-
-	.crm-container fieldset {
-		padding: 0;
-		margin: 0;
-	}
-
-	.crm-container .crm-section .content {
-		clear:both;
-		margin-left: 0;
-	}
-
-	.crm-container * {
-		width: auto !important;
-		max-width: 90vw;
-	}
-
-	.select2-container,
-	.crm-container input[type=text] {
-		width: 100% !important;
-		padding: 0 !important;
-	}
-
-	.crm-container .credit_card_type-section .crm-credit_card_type-icons a {
-	width: 50px !important;
-	height: 30px !important;
-	}
-
-	.input {
-		margin-right: 0;
-	}
-
-	.crm-container input.crm-form-text, .crm-container .crm-icon-picker-button, .crm-container input.dateplugin {
-		padding: 0;
-
-	}
-
-	#crm-container.crm-public input[type="text"], #crm-container.crm-public input[type="password"],
-	#crm-container.crm-public input[type="email"], #crm-container.crm-public select {
-		padding: 0;
-	}
-
-}
-
-
-/*REST OF SITE MEDIA QUERIES*/
+/*MEDIA QUERIES*/
 
 @media only screen and (max-device-width: 900px) {
 	body {
