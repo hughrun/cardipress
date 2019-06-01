@@ -33,12 +33,8 @@ input {
 }
 
 /*fix fontsize*/
-#crm-container.crm-section .label,
-#crm-container.crm-section .content,
-#crm-container.crm-section .price-set-row,
-#crm-container.crm-public .label,
-#crm-container.crm-public .content,
-#crm-container.crm-public .price-set-row {
+#crm-container.crm-section *,
+#crm-container.crm-public * {
 	font-size: 20px;
 }
 
